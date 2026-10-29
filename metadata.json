@@ -1,0 +1,6 @@
+{
+  "name": "VoltGuard — EV Battery Monitoring Dashboard",
+  "description": "AI-Enhanced Cell-Level Battery Monitoring and Early-Anomaly Detection System for EV Battery Packs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
