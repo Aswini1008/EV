@@ -106,3 +106,24 @@ export interface VehicleProfile {
   userName: string;
   userRole: string;
 }
+
+export interface CellDiagnostic {
+  id: number;
+  label: string; // e.g. "Cell 01"
+  row: number; // 1, 2, or 3
+  col: number; // 1, 2, 3, or 4
+  voltage: number; // in Volts, e.g. 4.12
+  nominalVoltage: number; // 4.12
+  voltageDelta: number; // e.g. -0.30 V
+  temperature: number; // in °C, e.g. 28.5
+  tempDelta: number; // e.g. +13.9 °C
+  resistance: number; // in mΩ, e.g. 0.85
+  soc: number; // in %, e.g. 82
+  status: 'Normal' | 'Warning' | 'Critical';
+  hasError: boolean;
+  errorName?: string;
+  errorCode?: string;
+  errorDescription?: string;
+  recommendedAction?: string;
+}
+

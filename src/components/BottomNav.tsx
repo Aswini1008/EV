@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Zap, Bell, Car } from 'lucide-react';
+import { Home, Zap, Bell, Car, Layers } from 'lucide-react';
 import { NavItem } from './Sidebar';
 
 interface BottomNavProps {
@@ -25,6 +25,12 @@ export const BottomNav: React.FC<BottomNavProps> = ({
       label: 'Charging',
       fullLabel: 'Battery Charging',
       icon: Zap,
+    },
+    {
+      id: 'cell_level' as NavItem,
+      label: 'Cells',
+      fullLabel: 'Cell Level',
+      icon: Layers,
     },
     {
       id: 'alerts_history' as NavItem,

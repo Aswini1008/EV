@@ -24,6 +24,7 @@ import { Sidebar, NavItem } from './components/Sidebar';
 import { BottomNav } from './components/BottomNav';
 import { BatteryHealthPage } from './pages/BatteryHealthPage';
 import { BatteryChargingPage } from './pages/BatteryChargingPage';
+import { CellLevelPage } from './pages/CellLevelPage';
 import { AlertsHistoryPage } from './pages/AlertsHistoryPage';
 import { VehicleProfilePage } from './pages/VehicleProfilePage';
 import { ProfileModal } from './components/ProfileModal';
@@ -164,6 +165,10 @@ export default function App() {
               onSimulateStartCharge={handleStartCharging}
               onSimulateStopCharge={handleStopCharging}
             />
+          )}
+
+          {currentTab === 'cell_level' && (
+            <CellLevelPage isOnline={isOnline} />
           )}
 
           {currentTab === 'alerts_history' && (

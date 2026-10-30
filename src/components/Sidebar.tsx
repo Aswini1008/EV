@@ -1,6 +1,6 @@
-import { Home, Zap, Bell, Car } from 'lucide-react';
+import { Home, Zap, Bell, Car, Layers } from 'lucide-react';
 
-export type NavItem = 'battery_health' | 'battery_charging' | 'alerts_history' | 'vehicle_profile';
+export type NavItem = 'battery_health' | 'battery_charging' | 'cell_level' | 'alerts_history' | 'vehicle_profile';
 
 interface SidebarProps {
   currentTab: NavItem;
@@ -12,7 +12,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
   currentTab,
   onSelectTab,
 }) => {
-  // Exactly four items matching the reference image
   const navItems = [
     {
       id: 'battery_health' as NavItem,
@@ -23,6 +22,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
       id: 'battery_charging' as NavItem,
       label: 'Battery Charging',
       icon: Zap,
+    },
+    {
+      id: 'cell_level' as NavItem,
+      label: 'Cell Level',
+      icon: Layers,
     },
     {
       id: 'alerts_history' as NavItem,
